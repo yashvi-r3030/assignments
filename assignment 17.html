@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>University Admission</title>
+</head>
+
+<body>
+
+    <h2>University Admission Age Checker</h2>
+
+    Enter Your Age:
+    <input type="number" id="age">
+
+    <button onclick="checkAge()">Check</button>
+
+    <h3 id="result"></h3>
+
+    <script>
+        function checkAge()
+        {
+            var age = Number(document.getElementById("age").value);
+
+            if (age >= 18)
+            {
+                document.getElementById("result").innerHTML =
+                "Congratulations! You are eligible for university admission.";
+            }
+            else if (age > 0)
+            {
+                document.getElementById("result").innerHTML =
+                "Sorry! You are not eligible. Minimum age is 18 years.";
+            }
+            else
+            {
+                document.getElementById("result").innerHTML =
+                "Please enter a valid age.";
+            }
+        }
+    </script>
+
+</body>
+</html>
